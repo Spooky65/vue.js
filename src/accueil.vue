@@ -9,7 +9,6 @@
     <router-link tag="button" to="/ajouter">
         ajouter
     </router-link>
-
     
 </div>
 </template>
@@ -29,11 +28,16 @@ export default {
     },
 
     methods: {
-        
-
-       
+        goBack () {
+        window.history.length > 1
+            ? this.$router.go(-1)
+            : this.$router.push('/')
+        },
         remove: function(index) {
             this.movies.splice(index, 1)
+        },
+        movies_search: function() {
+            return this.movies.filter(m => m.title.toLowerCase().indexOf(this.search.toLowerCase())!=-1);
         }
     },
 
@@ -45,9 +49,7 @@ export default {
         firstletter: function() {
             return this.message[0]
         },
-        movies_search: function() {
-            return this.movies.filter(m => m.title.toLowerCase().indexOf(this.search.toLowerCase())!=-1);
-        }
+        
     }
 }
 </script>

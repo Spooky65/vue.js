@@ -20,7 +20,9 @@ export default {
             movie_to_add: {},
             movie_to_edit: null,
             search: "",
-            
+            movies: {
+                shared_data: window.shared_data
+            }
         }
     },
 

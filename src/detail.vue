@@ -16,7 +16,7 @@ export default {
             movie_to_add: {},
             movie_to_edit: null,
             search: "",
-            data: {
+            movies: {
                 shared_data: window.shared_data
             }
         }

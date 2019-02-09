@@ -6,10 +6,7 @@ import ajouter from './ajouter.vue'
 import detail from './detail.vue'
 import MovieItemComponent from './components/movieitem.vue'
 import VueRouter from 'vue-router'
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
 
-Vue.use(Vuetify)
 Vue.use(VueRouter);
 
 Vue.component('movie-item', MovieItemComponent)
